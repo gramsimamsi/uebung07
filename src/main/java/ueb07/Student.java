@@ -1,6 +1,8 @@
 package ueb07;
 
-class Student {
+import java.util.Comparator;
+
+class Student implements Comparable {
 	private int matrikel;
 	private String name;
 
@@ -33,4 +35,40 @@ class Student {
 	public String toString() {
 		return name + " (" + matrikel + ")";
 	}
+
+	@Override
+	public int compareTo(Object o) {
+		Student compareStud = (Student) o;
+		return this.matrikel - compareStud.matrikel;
+	}
+
+	static class StudentComparator implements Comparator<Student> {
+
+
+		@Override
+		public int compare(Student o1, Student o2) {
+			return o1.name.compareTo(o2.name);
+		}
+	}
+
+	static Comparator<Student> getComparator(){ return new StudentComparator(); }
+
+	static class StudentComparatorComplex implements Comparator<Student> {
+
+
+		@Override
+		public int compare(Student o1, Student o2) {
+
+			int compVal = o1.name.compareTo(o2.name);
+
+			if(compVal != 0){
+				return compVal;
+			}
+			else{
+				return o1.matrikel - o2.matrikel;
+			}
+		}
+	}
+
+	static Comparator<Student> getComparatorComplex(){ return new StudentComparatorComplex(); }
 }
