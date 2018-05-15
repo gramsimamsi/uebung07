@@ -38,7 +38,7 @@ Implementieren Sie [Bubble-Sort](https://de.wikipedia.org/wiki/Bubblesort), ein 
 
 Oft ist es nötig, Arrays (oder andere Datenstrukturen) nach verschiedenen Kriterien zu sortieren, z.B. beim Email-Posteingang: nach Absender, Datum, Betreff, Größe, etc.
 
-- Implementieren Sie Bubble-Sort nun erneut, nur dieses mal _ohne Brschränkung der Übergabeparameter_; Erweitern Sie dazu die Signatur um einen `Comparator` und passen Sie Ihre Implementierung entsprechend an.
+- Implementieren Sie Bubble-Sort nun erneut, nur dieses mal _ohne Beschränkung der Übergabeparameter_; Erweitern Sie dazu die Signatur um einen `Comparator` und passen Sie Ihre Implementierung entsprechend an.
 - Implementieren Sie einen `Comparator`, welcher Studenten dem Namen nach alphabetisch aufsteigend sortiert.
 	Testen Sie diesen mit einem geeigneten Testfall.
 - Schreiben Sie einen `Comparator`, welcher Studenten zuerst dem Namen nach alphabetisch aufsteigend sortiert und bei Namensgleichheit anhand der Matrikelnummer aufsteigend unterscheidet.
